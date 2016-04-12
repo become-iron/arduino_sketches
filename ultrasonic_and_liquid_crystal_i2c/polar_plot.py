@@ -13,11 +13,12 @@ ax = plt.subplot(111, projection='polar')
 
 while True:
     with serial.Serial('COM7', 9600, timeout=1) as ser:
-        val = int(ser.readline().decode("utf-8")[:-2])  # получаемое значение
+        val = int(ser.readline().decode("utf-8").strip())  # получаемое значение
         print(val)
     if val < 50:
         prevX, prevY = X, Y
-        X, Y = X + 10, val
+        X += 10
+        Y = val
 
         # TODO подправить паузу
         plt.pause(.5)  # пауза между выводами
