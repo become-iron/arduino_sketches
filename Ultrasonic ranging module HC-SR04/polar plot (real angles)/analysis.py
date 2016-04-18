@@ -31,7 +31,7 @@ while time() <= finishTime:
         except ValueError:
             print('Ошибка: ', ser)
 
-    if 0 < currDist < 500:
+    if 0 < currDist < 500:  # исключение ложных срабатываний датчика
         angle = currAngle
         dist = currDist
         values[currAngle] = values[currAngle] + [currDist]

@@ -3,8 +3,6 @@
 
 ![](graph.png)
 
-![](photo_1.jpg)
-
 ![](photo_2.jpg)
 
 ![](photo_3.jpg)
